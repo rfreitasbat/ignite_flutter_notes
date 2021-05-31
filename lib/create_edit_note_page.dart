@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/butto,_widget.dart';
 
 class CreateEditNotePage extends StatefulWidget {
   @override
@@ -56,21 +57,7 @@ class _CreateEditNotePageState extends State<CreateEditNotePage> {
             SizedBox(
               height: 10,
             ),
-            if (description.isNotEmpty)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 250,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context, description);
-                      },
-                      child: Text("Salvar"),
-                    ),
-                  ),
-                ],
-              )
+            if (description.isNotEmpty) ButtonWidget(description),
           ],
         ),
       ),
