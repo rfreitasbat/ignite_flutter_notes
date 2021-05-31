@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes/butto,_widget.dart';
+import 'package:notes/button_widget.dart';
 
 class CreateEditNotePage extends StatefulWidget {
   @override
