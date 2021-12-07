@@ -9,10 +9,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var notes = <String>["Minha primeira nota"];
   @override
   Widget build(BuildContext context) {
     final user = ModalRoute.of(context)!.settings.arguments as UserModel;
-    var notes = <String>["Minha primeira nota"];
+
     return Scaffold(
       appBar: AppBar(
         leading: ClipRRect(
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                   await Navigator.pushNamed(context, "/create-edit-note");
               if (description != null) {
                 notes.add(description as String);
-                print(description);
+                print(notes);
                 setState(() {});
               }
             },
@@ -56,7 +57,9 @@ class _HomePageState extends State<HomePage> {
                           notes.removeAt(i);
                         } else {
                           notes[i] = description;
+                          print(i);
                         }
+                        print(notes);
                         setState(() {});
                       }
                     },
