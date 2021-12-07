@@ -13,7 +13,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final user = ModalRoute.of(context)!.settings.arguments as UserModel;
-
     return Scaffold(
       appBar: AppBar(
         leading: ClipRRect(
@@ -32,7 +31,6 @@ class _HomePageState extends State<HomePage> {
                   await Navigator.pushNamed(context, "/create-edit-note");
               if (description != null) {
                 notes.add(description as String);
-                print(notes);
                 setState(() {});
               }
             },
