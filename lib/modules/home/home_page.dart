@@ -55,9 +55,7 @@ class _HomePageState extends State<HomePage> {
                           notes.removeAt(i);
                         } else {
                           notes[i] = description;
-                          print(i);
                         }
-                        print(notes);
                         setState(() {});
                       }
                     },
